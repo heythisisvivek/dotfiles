@@ -1,0 +1,33 @@
+#########################################################
+## LS Command
+#########################################################
+
+alias ll='ls -l --human-readable --color=auto'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
+
+#########################################################
+## Network Command
+#########################################################
+
+alias myip="curl ipinfo.io/json"
+
+#########################################################
+## RPI Command
+#########################################################
+
+alias rpioff="ssh rpi 'sudo poweroff'"
+alias rpireboot="ssh rpi 'sudo reboot'"
+
+#########################################################
+## Update Configuration
+#########################################################
+
+alias tmux-update="pkg update && \
+		   pkg upgrade"
+
+alias debian-update="sudo apt update && \
+		     sudo apt upgrade && \
+		     sudo apt dist-upgrade && \
+		     sudo apt auto-remove && \
+		     sudo apt autoclean"
