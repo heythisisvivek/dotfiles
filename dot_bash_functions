@@ -1,0 +1,8 @@
+# Chezmoi wrapper to support 'chezmoi cd'
+chezmoi() {
+  if [[ "$1" == "cd" ]]; then
+    cd "$(command chezmoi source-path)" || return
+  else
+    command chezmoi "$@"
+  fi
+}
