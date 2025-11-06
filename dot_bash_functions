@@ -1,8 +1,17 @@
-# Chezmoi wrapper to support 'chezmoi cd'
+# Chezmoi wrapper with 'cd' functionality (skipping native subshell)
 chezmoi() {
   if [[ "$1" == "cd" ]]; then
     cd "$(command chezmoi source-path)" || return
   else
     command chezmoi "$@"
+  fi
+}
+
+# du command with sorting capability based on filesize
+du() {
+  if [[ "$1" == "sort" ]]; then
+    command sudo du -sh -- * | sort -rh
+  else
+    command du "$@"
   fi
 }
