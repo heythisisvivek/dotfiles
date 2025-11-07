@@ -4,14 +4,17 @@ A comprehensive collection of personal configuration files for Linux and macOS s
 
 ## Quick Start
 
-The following commands download the Chezmoi binary for your system architecture and initialize the source state. Applying changes will only occur when you execute the chosen command.
+The following commands download the Chezmoi binary for your system architecture and initialize the source state. Applying changes will only occur when you execute the respective command.
 
 ```bash
+# Install Chezmoi binary
+sh -c "$(curl -fsLS get.chezmoi.io)" 
+
 # Pull source file (not apply changes)
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init heythisisvivek/dotfiles
+chezmoi init heythisisvivek
 
 # Pull source file (apply changes)
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply heythisisvivek/dotfiles
+chezmoi init --apply heythisisvivek
 ```
 
 ## License
