@@ -1,0 +1,21 @@
+encryption = "age"
+
+[diff]
+    exclude = ["scripts"]
+
+[status]
+    exclude = ["scripts"]
+
+[data]
+    name = "{{ promptString "Enter your name" }}"
+    email = "{{ promptString "Enter your email" }}"
+
+[git]
+    autoPush = false
+    autoCommit = false
+
+[age]
+    passphrase = false
+    identity = "~/.config/age/Chezmoi.key"
+    recipient = "{{ promptString "Enter your recipient key" }}"
+
