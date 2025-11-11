@@ -1,10 +1,14 @@
 #########################################################
-## LS Command
+## POSIX Command
 #########################################################
 
-alias ll='ls -l --human-readable --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
+# ls command
+alias ll="ls -l --human-readable --color=auto"
+alias la="ls -A --color=auto"
+alias l="ls -CF --color=auto"
+
+# rm command
+alias rm="rm -rvi"
 
 #########################################################
 ## Network Command
