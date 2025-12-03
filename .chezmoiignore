@@ -3,9 +3,9 @@ README.md
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
-.local/bin/TSMP.bat
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
+.local/bin/TSMP.bat
 {{ end }}
